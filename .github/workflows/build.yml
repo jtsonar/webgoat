@@ -37,4 +37,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jtsonar_webgoat_3ebe3031-0575-4a63-81df-9fe19bf5ca5b -Dsonar.projectName='webgoat'
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jtsonar_webgoat_3ebe3031-0575-4a63-81df-9fe19bf5ca5b -Dsonar.projectName='webgoat' -Dsonar.qualitygate.wait=true -Dsonar.sources=src/main/java,src/main/resources
