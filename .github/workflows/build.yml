@@ -48,7 +48,7 @@ jobs:
                     architecture: x64
                     cache: 'maven'
             - name: Build and analyze
-                env:
-                  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-                  SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-                run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jtsonar_webgoat_3ebe3031-0575-4a63-81df-9fe19bf5ca5b -Dsonar.projectName='webgoat'
+              env:  
+                    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+                    SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+              run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jtsonar_webgoat_3ebe3031-0575-4a63-81df-9fe19bf5ca5b -Dsonar.projectName='webgoat'
